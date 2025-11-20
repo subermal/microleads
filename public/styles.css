@@ -1,0 +1,133 @@
+/* Basic page styling */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+  }
+  
+  .wrap {
+    max-width: 980px;
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+  
+  /* Headings and tagline */
+  h1 {
+    margin-bottom: 4px;
+  }
+  
+  .tagline {
+    margin-top: 0;
+    color: #555;
+  }
+  
+  /* Card layout for form and list */
+  .card {
+    background: #fff;
+    border: 1px solid #e6e9f0;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 12px 0;
+  }
+  
+  /* Form controls */
+  label {
+    display: block;
+    margin: 8px 0;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+    padding: 8px;
+    border: 1px solid #ccd3e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  button {
+    cursor: pointer;
+    background: #2e6be6;
+    color: #fff;
+    border: none;
+    margin-top: 8px;
+  }
+  
+  button:hover {
+    background: #234fb0;
+  }
+  
+  /* Filters bar */
+  .filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .filters input,
+  .filters select {
+    flex: 1 1 160px;
+  }
+  
+  .filters button {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  th,
+  td {
+    padding: 8px 10px;
+    border-top: 1px solid #eef1f6;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  thead tr {
+    background: #f7f9ff;
+  }
+  
+  /* Make action buttons look like links */
+  button.link {
+    background: transparent;
+    border: none;
+    color: #2e3a8c;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+  
+  /* Muted text and error styles */
+  .muted {
+    color: #666;
+  }
+  
+  .error {
+    color: #b00020;
+    min-height: 1.2em;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 700px) {
+    th:nth-child(4),
+    td:nth-child(4) {
+      display: none; /* hide Source on very small screens, optional */
+    }
+  
+    th:nth-child(6),
+    td:nth-child(6) {
+      display: none; /* hide Created on very small screens, optional */
+    }
+  }
+  

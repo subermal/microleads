@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Micro CRM Leads – microleads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Micro CRM Leads</h1>
+      <p class="tagline">
+        microleads – simple tracker for leads: create, search and update status.
+      </p>
+
+      <!-- Form: create new lead -->
+      <form id="newLead" class="card" novalidate>
+        <h2>Add lead</h2>
+
+        <!-- Error message area (student touch: inline instead of only alerts) -->
+        <p id="formError" class="error" aria-live="polite"></p>
+
+        <label>
+          Name
+          <input name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input name="email" type="email" required />
+        </label>
+
+        <label>
+          Company
+          <input name="company" />
+        </label>
+
+        <label>
+          Source
+          <input name="source" placeholder="e.g. Website form, LinkedIn" />
+        </label>
+
+        <label>
+          Notes
+          <textarea name="notes" rows="3"></textarea>
+        </label>
+
+        <button type="submit">Create lead</button>
+      </form>
+
+      <!-- Leads table & filters -->
+      <section class="card">
+        <h2>Leads</h2>
+
+        <div class="filters">
+          <input
+            id="q"
+            placeholder="Search name, email, company or source"
+            aria-label="Search leads"
+          />
+          <select id="status" aria-label="Filter by status">
+            <option value="">All statuses</option>
+            <option>New</option>
+            <option>Contacted</option>
+            <option>Qualified</option>
+            <option>Lost</option>
+            <option>Won</option>
+          </select>
+          <button id="applyFilters" type="button">Apply filters</button>
+        </div>
+
+        <!-- my touch: show counts -->
+        <p id="counts" class="muted"></p>
+
+        <table id="grid">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Company</th>
+              <th>Source</th>
+              <th>Status</th>
+              <th>Created</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

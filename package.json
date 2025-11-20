@@ -1,0 +1,16 @@
+{
+  "name": "microleads",
+  "version": "1.0.0",
+  "description": "Micro CRM Leads tracker for coursework",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
